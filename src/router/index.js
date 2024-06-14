@@ -63,5 +63,8 @@ export function setupRouter(app) {
     app.use(router);
 }
 
+export function toLogin() {
+    router.replace({path: "/login"});
+}
 
 export default router;
