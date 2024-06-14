@@ -11,6 +11,9 @@ importers:
       element-plus:
         specifier: ^2.7.5
         version: 2.7.5(vue@3.4.27)
+      pinia:
+        specifier: ^2.1.7
+        version: 2.1.7(vue@3.4.27)
       vue:
         specifier: ^3.4.21
         version: 3.4.27
@@ -1309,6 +1312,18 @@ packages:
   pify@4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
+
+  pinia@2.1.7:
+    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.3.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
 
   pkg-types@1.1.1:
     resolution: {integrity: sha512-ko14TjmDuQJ14zsotODv7dBlwxKhUKQEhuhmbqo1uCi9BB0Z2alo/wAXg6q1dTR5TyuqYyWhjtfe/Tsh+X28jQ==}
@@ -3087,6 +3102,12 @@ snapshots:
 
   pify@4.0.1:
     optional: true
+
+  pinia@2.1.7(vue@3.4.27):
+    dependencies:
+      '@vue/devtools-api': 6.6.3
+      vue: 3.4.27
+      vue-demi: 0.14.8(vue@3.4.27)
 
   pkg-types@1.1.1:
     dependencies:

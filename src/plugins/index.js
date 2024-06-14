@@ -1,7 +1,9 @@
-import {setupRouter} from "../router/index";
+import {setupRouter} from "@/router/index";
+import {setupStore} from "@/stores/index";
 
 export default {
     install(app) {
-        setupRouter(app)
+        setupRouter(app);
+        setupStore(app)
     }
 }
