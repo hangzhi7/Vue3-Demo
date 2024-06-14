@@ -18,7 +18,10 @@ const routesList = ref([])
 
 const router = useRouter();
 
-routesList.value = router.getRoutes();
+let routes = router.getRoutes();
+routes.sort((a, b) => a.meta.menuOrder - b.meta.menuOrder)
+routesList.value =  routes;
+
 </script>
 
 <style >
