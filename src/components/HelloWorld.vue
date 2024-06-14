@@ -1,11 +1,3 @@
-<script setup>
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
-</script>
 
 <template>
   <h1>{{ msg }}</h1>
@@ -27,5 +19,26 @@ const count = ref(0)
     <!-- svg本地图标   -->
     <el-button type="info"><svg-icon icon-class="account" size="1.2em"/>本地图标</el-button>
   </div>
+
+  <!-- 测试less样式  -->
+  <div class="box" ></div>
 </template>
 
+<script setup>
+
+defineProps({
+  msg: String,
+})
+
+const count = ref(0)
+</script>
+
+
+<style lang="less" scoped>
+.box {
+  width: 550px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: @bg-color;
+}
+</style>

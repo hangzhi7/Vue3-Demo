@@ -63,5 +63,13 @@ export default defineConfig({
       // '@': resolve(__dirname, 'src')
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        additionalData: `@import "@/assets/style/variables.less";`,
+      },
+    },
+  },
 })
