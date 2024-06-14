@@ -7,7 +7,11 @@ const pathSrc = resolve(__dirname, "src");
 
 import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite";
+
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,6 +23,8 @@ export default defineConfig({
       resolvers: [
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         ElementPlusResolver(),
+        // 自动导入图标组件
+        IconsResolver({}),
       ],
       // 指定自动导入函数TS类型声明文件路径
       // 也可以不生成声明文件 dts: false
@@ -28,15 +34,25 @@ export default defineConfig({
       resolvers: [
         // 自动导入 Element Plus 组件
         ElementPlusResolver(),
+        // 自动注册图标组件
+        IconsResolver({
+          // element-plus图标库，其他图标库 https://icon-sets.iconify.design/
+          enabledCollections: ["ep"]
+        }),
       ],
       // 指定自动导入组件TS类型声明文件路径
       // 也可以不生成声明文件 dts: false
       dts: resolve(pathSrc,"types","components.d.ts"),
     }),
+    Icons({
+      // 自动安装图标库
+      autoInstall: true,
+    }),
 
   ],
   resolve: {
     alias: {
+      // '@': resolve(__dirname, 'src')
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
