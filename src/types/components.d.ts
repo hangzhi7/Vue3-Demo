@@ -15,5 +15,6 @@ declare module 'vue' {
     IEpWarnTriangleFilled: typeof import('~icons/ep/warn-triangle-filled')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
   }
 }
