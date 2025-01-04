@@ -66,9 +66,13 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      less: {
+      // less: {
+      //   javascriptEnabled: true,
+      //   additionalData: `@import "@/assets/style/variables.less";`,
+      // },
+      scss: {
         javascriptEnabled: true,
-        additionalData: `@import "@/assets/style/variables.less";`,
+        additionalData: `@import "@/assets/style/variables.scss";`,
       },
     },
   },

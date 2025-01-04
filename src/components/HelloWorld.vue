@@ -21,8 +21,21 @@
   </div>
 
   <!-- 测试less样式  -->
+  <!--<div class="box" ></div>-->
+
+  <!-- 测试scss样式  -->
   <div class="box" ></div>
 </template>
+
+<style lang="scss" scoped>
+.box {
+  width: 550px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: $bg-color;
+}
+</style>
+
 
 <script setup>
 
@@ -33,12 +46,11 @@ defineProps({
 const count = ref(0)
 </script>
 
-
-<style lang="less" scoped>
+<!--<style lang="less" scoped>
 .box {
   width: 550px;
   height: 50px;
   margin-top: 20px;
   background-color: @bg-color;
 }
-</style>
+</style>-->

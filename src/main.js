@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+import '@/assets/style/style.css'
 import App from './App.vue'
 
 //插件

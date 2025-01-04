@@ -55,13 +55,13 @@ function onSubmit() {
 
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 
 .error {
-  color: @error-color;
+  color: $error-color;
 }
 .el-form-item span {
-  color: @error-color;
+  color: $error-color;
 }
 
 </style>
